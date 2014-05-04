@@ -16,3 +16,5 @@ source "$ZSH/plugins/sudo/sudo.plugin.zsh"
 
 UPDATE_ZSH_DAYS=1
 DISABLE_AUTO_UPDATE="false"
+
+export HASTE_SERVER="http://p.yawk.at"
