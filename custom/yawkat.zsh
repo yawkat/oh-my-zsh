@@ -6,7 +6,7 @@ ZSH_THEME_GIT_PROMPT_DIRTY="*"
 ZSH_THEME_GIT_PROMPT_CLEAN=""
 
 PROMPT="%{$fg_bold[green]%}%~%{$fg_no_bold[green]%}%# %{$reset_color%}"
-RPROMPT="$(git_prompt_info)%{$fg_no_bold[green]%}%n@%m%{$reset_color%}"
+RPROMPT="%{$fg_no_bold[green]%}%n@%m%{$reset_color%}"
 
 source "$ZSH/plugins/mvn/mvn.plugin.zsh"
 alias mvn="mvn-color"
