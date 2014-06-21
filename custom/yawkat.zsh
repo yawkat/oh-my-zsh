@@ -9,7 +9,7 @@ PROMPT="%{$fg_bold[green]%}%~%{$fg_no_bold[green]%}%# %{$reset_color%}"
 RPROMPT="%{$fg_no_bold[green]%}%n@%m%{$reset_color%}"
 
 source "$ZSH/plugins/mvn/mvn.plugin.zsh"
-alias mvn="mvn-color"
+#alias mvn="mvn-color"
 
 source "$ZSH/plugins/rsync/rsync.plugin.zsh"
 source "$ZSH/plugins/sudo/sudo.plugin.zsh"
