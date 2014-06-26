@@ -20,5 +20,5 @@ DISABLE_AUTO_UPDATE="false"
 export HASTE_SERVER="http://p.yawk.at"
 
 function myip() {
-    curl "ifconfig.me"
+    curl "http://yawk.at/misc/myip.php"
 }
