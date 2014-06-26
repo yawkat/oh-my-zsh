@@ -18,3 +18,7 @@ UPDATE_ZSH_DAYS=1
 DISABLE_AUTO_UPDATE="false"
 
 export HASTE_SERVER="http://p.yawk.at"
+
+function myip() {
+    curl "ifconfig.me"
+}
