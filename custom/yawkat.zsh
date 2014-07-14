@@ -22,3 +22,5 @@ export HASTE_SERVER="http://p.yawk.at"
 function myip() {
     curl "http://yawk.at/misc/myip.php"
 }
+
+alias zipls="unzip -l $1"
