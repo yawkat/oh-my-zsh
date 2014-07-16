@@ -23,4 +23,14 @@ function myip() {
     curl "http://yawk.at/misc/myip.php"
 }
 
+function dirunzip() {
+    file="$1"
+    basename=`basename --suffix=".zip" "$file"`
+    absolute_path_to_zip=`readlink -f "$file"`
+
+    mkdir -p "$basename" && cd "$basename" && unzip "$absolute_path_to_zip" && cd ..
+}
+
 alias zipls="unzip -l $1"
+alias mvncp="mvn-color clean package"
+alias mvnci="mvn-color clean install"
