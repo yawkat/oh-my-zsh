@@ -34,3 +34,5 @@ function dirunzip() {
 alias zipls="unzip -l $1"
 alias mvncp="mvn-color clean package"
 alias mvnci="mvn-color clean install"
+
+alias rsync-mtp-synchronize="rsync-synchronize --exclude='**/.*' --exclude='**/.*/***' --size-only"
