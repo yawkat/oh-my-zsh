@@ -31,8 +31,20 @@ function dirunzip() {
     mkdir -p "$basename" && cd "$basename" && unzip "$absolute_path_to_zip" && cd ..
 }
 
+haste() { a=$(cat); curl -X POST -s -d "$a" http://p.yawk.at/documents | awk -F '"' '{print "http://p.yawk.at/"$4}'; }
+
 alias zipls="unzip -l $1"
 alias mvncp="mvn-color clean package"
 alias mvnci="mvn-color clean install"
 
 alias rsync-mtp-synchronize="rsync-synchronize --exclude='**/.*' --exclude='**/.*/***' --size-only"
+
+alias ccd="cd "`pwd`""
+
+function javapz() {
+    jar="$1"
+    class=`echo "$2" | sed 's_\._/_g'`.class
+    unzip -p $jar "$class" > tmpjavapz.class
+    javap -private -c tmpjavapz
+    rm -f tmpjavapz.class
+}
