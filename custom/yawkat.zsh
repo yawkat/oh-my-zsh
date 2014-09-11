@@ -45,6 +45,6 @@ function javapz() {
     jar="$1"
     class=`echo "$2" | sed 's_\._/_g'`.class
     unzip -p $jar "$class" > tmpjavapz.class
-    javap -private -c tmpjavapz
+    javap $3 -private -c tmpjavapz
     rm -f tmpjavapz.class
 }
