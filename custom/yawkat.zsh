@@ -31,7 +31,10 @@ function dirunzip() {
     mkdir -p "$basename" && cd "$basename" && unzip "$absolute_path_to_zip" && cd ..
 }
 
-haste() { a=$(cat); curl -X POST -s -d "$a" http://p.yawk.at/documents | awk -F '"' '{print "http://p.yawk.at/"$4}'; }
+function haste() {
+    text=$(cat)
+    curl -X POST --http1.0 -s -d "$text" http://p.yawk.at/documents | awk -F '"' '{print "http://p.yawk.at/"$4}'
+}
 
 alias zipls="unzip -l $1"
 alias mvncp="mvn-color clean package"
@@ -45,6 +48,11 @@ function javapz() {
     jar="$1"
     class=`echo "$2" | sed 's_\._/_g'`.class
     unzip -p $jar "$class" > tmpjavapz.class
-    javap $3 -private -c tmpjavapz
+    javap $3 -private -l -c tmpjavapz
     rm -f tmpjavapz.class
 }
+
+fpath=($(readlink -f $(dirname $0)/completion) $fpath)
+autoload -U compinit
+compinit
+zstyle ':completion:*' menu select=2
