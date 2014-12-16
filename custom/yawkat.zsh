@@ -40,11 +40,12 @@ alias zipls="unzip -l $1"
 alias mvncp="mvn-color clean package"
 alias mvnci="mvn-color clean install"
 
-alias browser-open="firefox -private-window '$1'"
+alias browser-open="firefox -private-window"
 
 alias rsync-mtp-synchronize="rsync-synchronize --exclude='**/.*' --exclude='**/.*/***' --size-only"
 
 alias ccd="cd "`pwd`""
+alias private="unset HISTFILE"
 
 function javapz() {
     jar="$1"
