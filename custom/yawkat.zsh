@@ -39,6 +39,7 @@ function haste() {
 alias zipls="unzip -l $1"
 alias mvncp="mvn-color clean package"
 alias mvnci="mvn-color clean install"
+alias mvncsi="mvn-color clean source:jar install"
 
 alias browser-open="firefox -private-window"
 
